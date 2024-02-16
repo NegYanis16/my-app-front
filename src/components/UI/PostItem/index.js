@@ -7,8 +7,6 @@ const Index = ({article}) => {
         <div className={styles.item} key={article.id}>
             <Link href={`/blog/${article.id}`}>
                 <h2>{article.title}</h2>
-                <p>{article.description}</p>
-                <p>Date : {article.date}</p>
             </Link>
         </div>
     );
