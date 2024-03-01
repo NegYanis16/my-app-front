@@ -1,6 +1,6 @@
 import Header from '@/components/partials/Header';
 import { Inter, Poppins } from 'next/font/google'
-import './globals.css'
+import '@/assets/css/globals.scss';
 
 const inter = Inter({ subsets: ['latin'] })
 const poppins = Poppins(
