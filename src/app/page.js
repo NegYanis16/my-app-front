@@ -16,12 +16,9 @@ export default async function Home() {
 
   return (
     <div className="container">
-      {/* on utilise le composant TitlePage */}
-      <TitlePage title="Accueil" />
-      {/* on utilise le composant GridPosts */}
-      {
+      {/* {
         articles && <GridPosts articles={articles.data.getArticles} />
-      }
+      } */}
     </div>
   )
 }

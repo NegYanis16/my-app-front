@@ -7,13 +7,7 @@ const Index = () => {
     return (
         <>
         <header className={styles.header__main}>
-            <Link href="/">
-                <h1 className={styles.logo}>My wonderfull app</h1>
-            </Link>
-            <div className={styles.right__part}>
-                <SearchInput />
-            </div>
-            </header>
+        </header>
         </>
     );
 }
