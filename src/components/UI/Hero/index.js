@@ -1,19 +1,40 @@
 'use client';
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import TitleMain from "@/components/UI/TitleMain";
+import SubTitle from "@/components/UI/SubTitle";
+import Link from "next/link";
+import styles from "./index.module.scss";
 
-const Index = () => {
+const Index = ({subtitle, title, image, buttonLink, buttonText}) => {
+
+    const [heroHeight, setHeroHeight] = useState(0);
+
+    const adjustSize = () => { 
+        const windowHeight = window.innerHeight;
+        const headerHeight = document.querySelector("header").offsetHeight;
+        setHeroHeight(windowHeight - headerHeight);
+    }
 
     useEffect(() => {
-        const windowHeight = window.innerHeight;
-        const headerHeight = document.querySelector('header').offsetHeight;
-        console.log(document.querySelector('header'));
-        console.log(windowHeight, "window");
-        console.log(headerHeight, "header");
+        adjustSize();
+        window.addEventListener("resize", () => {
+            adjustSize();
+        });
     }, []);
 
     return (
-        <div>
-            
+        <div className={styles.wrapper} style={{ height: `${heroHeight}px`}}>
+            <div className={styles.content}>
+                <SubTitle text="We talk about" color="white" />
+                <TitleMain title="Cloud Computing" color="white"/ >
+                <Link href={buttonLink}>
+                    {buttonText}
+                </Link>
+            </div>
+            <div className={styles.overlay}></div>
+            <div className={styles.frame}>
+                <img src={image} alt="Wonderfull app" />
+            </div>
         </div>
     );
 }
