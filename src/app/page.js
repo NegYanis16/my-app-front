@@ -1,6 +1,5 @@
-import TitlePage from "@/components/UI/TitlePage";
-import GridPosts from "@/components/UI/GridPosts";
 import { GET_ARTICLES } from "@/graphql/queries";
+import Hero from "@/components/UI/Hero";
 
 export default async function Home() {
 
@@ -15,7 +14,8 @@ export default async function Home() {
   const articles = await res.json();
 
   return (
-    <div className="container">
+    <div>
+      <Hero/>
       {/* {
         articles && <GridPosts articles={articles.data.getArticles} />
       } */}
