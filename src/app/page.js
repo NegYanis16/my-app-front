@@ -1,5 +1,6 @@
 import { GET_ARTICLES } from "@/graphql/queries";
 import Hero from "@/components/UI/Hero";
+import Slider from "@/components/UI/Slider";
 import BackgroundHero from "../../public/background_hero.jpg";
 
 export default async function Home() {
@@ -23,6 +24,7 @@ export default async function Home() {
         buttonLink="/"
         buttonText="Discover"
       />
+      <Slider/>
       {/* {
         articles && <GridPosts articles={articles.data.getArticles} />
       } */}
