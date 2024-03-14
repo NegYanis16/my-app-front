@@ -1,9 +1,10 @@
 import { GET_ARTICLES } from "@/graphql/queries";
 import Hero from "@/components/UI/Hero";
 import Slider from "@/components/UI/Slider";
+import TitleMain from "@/components/UI/TitleMain";
 import BackgroundHero from "../../public/background_hero.jpg";
 import Image from "../../public/background_hero.jpg";
-
+import styles from "./index.module.scss";
 export default async function Home() {
 
   const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_API}/graphql`, {
@@ -19,7 +20,7 @@ export default async function Home() {
   const images = [Image.src, Image.src, Image.src,  Image.src]
 
   return (
-    <div style={{height: "3000px"}}>
+    <>
       <Hero
         subtitle="We talk about"
         title="Cloud computing"
@@ -27,12 +28,26 @@ export default async function Home() {
         buttonLink="/"
         buttonText="Discover"
       />
-      <Slider
-        images={images}
-      />
-      {/* {
-        articles && <GridPosts articles={articles.data.getArticles} />
-      } */}
-    </div>
+      <div className="container">
+        <section className={styles.about__wrapper}>
+          <div className={styles.left__part}>
+            <TitleMain
+              title="Discover the best blog ever" color="primary"
+            />
+            <a className="btn btn__primary" href="#">About us</a>
+          </div>
+          <div className={styles.right__part}>
+            <Slider
+              images={images}
+              width={330}
+            />
+          </div>
+        </section>
+        {/* {
+          articles && <GridPosts articles={articles.data.getArticles} />
+        } */}
+
+      </div>
+    </>
   )
 }

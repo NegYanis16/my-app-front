@@ -1,5 +1,4 @@
 .wrapper {
-    width: 330px;
     margin: 50px auto;
     position: relative;
 
@@ -18,20 +17,17 @@
 .slider__wrapper {
     overflow: hidden;
     border-radius: 200px;
-    // width: 300px;
 }
 
 .slider {
     display: flex;
-    gap: 50px;
+    width: min-content;
     position: relative;
-    width: 100%;
-    width: 3000px;
     transition: 0.3s all;
 }
 
 .slide {
-    width: 500px;
+    width: 100%;
     height: 500px;
     background: lightgray;
     overflow: hidden;
@@ -55,13 +51,16 @@
     border: 1px solid white;
     z-index: 999;
     transition: 0.3s all;
+
     &:disabled {
         opacity: 0.5;
         cursor: not-allowed;
     }
+
     &:hover {
         background: white;
         border: 1px solid var(--third-color);
+
         svg {
             path {
                 transition: 0.3s all;

@@ -1,0 +1,11 @@
+.about__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .left__part,
+    .right__part {
+        width: 50%;
+    }
+
+}

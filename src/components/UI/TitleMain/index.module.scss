@@ -7,4 +7,9 @@
     &.white {
         color: white;
     }
+    &.underlined {
+        &:after {
+            
+        }
+    }
 }
