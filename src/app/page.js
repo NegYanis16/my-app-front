@@ -2,6 +2,7 @@ import { GET_ARTICLES } from "@/graphql/queries";
 import Hero from "@/components/UI/Hero";
 import Slider from "@/components/UI/Slider";
 import BackgroundHero from "../../public/background_hero.jpg";
+import Image from "../../public/background_hero.jpg";
 
 export default async function Home() {
 
@@ -15,6 +16,8 @@ export default async function Home() {
 
   const articles = await res.json();
 
+  const images = [Image.src, Image.src, Image.src,  Image.src]
+
   return (
     <div style={{height: "3000px"}}>
       <Hero
@@ -24,7 +27,9 @@ export default async function Home() {
         buttonLink="/"
         buttonText="Discover"
       />
-      <Slider/>
+      <Slider
+        images={images}
+      />
       {/* {
         articles && <GridPosts articles={articles.data.getArticles} />
       } */}
