@@ -32,6 +32,7 @@ export default async function Home() {
         <section className={styles.about__wrapper}>
           <div className={styles.left__part}>
             <TitleMain
+              withUnderline={true}
               title="Discover the best blog ever" color="primary"
             />
             <a className="btn btn__primary" href="#">About us</a>
