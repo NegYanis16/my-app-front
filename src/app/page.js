@@ -2,6 +2,7 @@ import { GET_ARTICLES } from "@/graphql/queries";
 import Hero from "@/components/UI/Hero";
 import Slider from "@/components/UI/Slider";
 import TitleMain from "@/components/UI/TitleMain";
+import GridPosts from "@/components/UI/GridPosts"
 import BackgroundHero from "../../public/background_hero.jpg";
 import Image from "../../public/background_hero.jpg";
 import styles from "./index.module.scss";
@@ -44,9 +45,9 @@ export default async function Home() {
             />
           </div>
         </section>
-        {/* {
+        {
           articles && <GridPosts articles={articles.data.getArticles} />
-        } */}
+        }
 
       </div>
     </>
