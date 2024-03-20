@@ -3,6 +3,7 @@ import Hero from "@/components/UI/Hero";
 import Slider from "@/components/UI/Slider";
 import TitleMain from "@/components/UI/TitleMain";
 import GridPosts from "@/components/UI/GridPosts"
+import Title from "@/components/UI/Title"
 import BackgroundHero from "../../public/background_hero.jpg";
 import Image from "../../public/background_hero.jpg";
 import styles from "./index.module.scss";
@@ -29,7 +30,13 @@ export default async function Home() {
         buttonLink="/"
         buttonText="Discover"
       />
+
       <div className="container">
+      <Title/>
+      {
+          articles && <GridPosts articles={articles.data.getArticles} />
+        }
+
         <section className={styles.about__wrapper}>
           <div className={styles.left__part}>
             <TitleMain
@@ -45,10 +52,7 @@ export default async function Home() {
             />
           </div>
         </section>
-        {
-          articles && <GridPosts articles={articles.data.getArticles} />
-        }
-
+        
       </div>
     </>
   )

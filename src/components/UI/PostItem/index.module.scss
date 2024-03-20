@@ -1,7 +1,20 @@
+.rectangle {
+    width: 330px; 
+    height: 430px; 
+    background-color: white; 
+    border-radius: 30px;
+    position: relative;
+    .PostItArrow {
+        position: absolute;
+        top: 367px;
+        left: 250px;
+    }
+}
 .item {
     border-bottom: 1px solid var(--color-border);
     padding: 20px;
     color: inherit;
+    top: 147px;
 }
 
 .item a {
@@ -16,19 +29,11 @@
     font-family: var(--primary-font);
     font-size: 28 px;
 }
-.item .id{
+.id{
     color: #FF7F7F;
     font-family: var(--primary-font);
     font-size: 40px;
     text-align: right;
 }
 
-.rectangle {
-    // display: inline-block;
-    width: 200px; /* Définir la largeur du rectangle */
-    height: 300px; /* Définir la hauteur du rectangle */
-    background-color: white; /* Définir la couleur de fond */
-    border-radius: 15px;
-    
-}
 

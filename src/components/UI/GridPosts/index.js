@@ -1,8 +1,10 @@
 import PostItem from "../PostItem/index";
+
 import styles from "./index.module.scss";
 
 const Index = ({ articles }) => {
     return (
+
         <div className={styles.grid}>
             {
                 articles?.map(article => (

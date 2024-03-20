@@ -2,7 +2,8 @@ export const GET_ARTICLES = `
     query {
         getArticles {
             id,
-            title
+            title,
+            date
         }
     },
 `
