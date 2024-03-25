@@ -4,6 +4,8 @@ import Slider from "@/components/UI/Slider";
 import TitleMain from "@/components/UI/TitleMain";
 import GridPosts from "@/components/UI/GridPosts"
 import Title from "@/components/UI/Title"
+import Banner from "@/components/UI/Banner"
+import Footer from "@/components/UI/Footer"
 import BackgroundHero from "../../public/background_hero.jpg";
 import Image from "../../public/background_hero.jpg";
 import styles from "./index.module.scss";
@@ -22,7 +24,7 @@ export default async function Home() {
   const images = [Image.src, Image.src, Image.src,  Image.src]
 
   return (
-    <>
+    <div className={styles.container}>
       <Hero
         subtitle="We talk about"
         title="Cloud computing"
@@ -36,7 +38,7 @@ export default async function Home() {
       {
           articles && <GridPosts articles={articles.data.getArticles} />
         }
-
+        <Banner/>
         <section className={styles.about__wrapper}>
           <div className={styles.left__part}>
             <TitleMain
@@ -52,8 +54,9 @@ export default async function Home() {
             />
           </div>
         </section>
-        
+        <Footer/>  
       </div>
-    </>
+      
+    </div>
   )
 }

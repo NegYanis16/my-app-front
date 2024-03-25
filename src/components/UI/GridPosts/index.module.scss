@@ -1,7 +1,17 @@
 .grid {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 20px 40px;
-	grid-auto-rows: minmax(100px, auto);
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 60px;
+  justify-content: center;
 	
+
 }
+.button{
+	height: 50px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	margin-top: 50px;
+}	

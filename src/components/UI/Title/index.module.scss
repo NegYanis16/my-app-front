@@ -1,4 +1,12 @@
-.left__part,
-.right__part {
-    width: 50%;
+@import "../../../assets/css/helpers/mixins";
+.wrapper{
+    margin: 50px auto;
+    position: relative;
+
+    @include displayFlex(center, space-between);
+
+    .left__part,
+    .right__part {
+        width: 50%;
+    }
 }

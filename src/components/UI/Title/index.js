@@ -5,7 +5,7 @@ import styles from "./index.module.scss";
 const Index = () => {
 
     return (
-        <section>
+        <div className={styles.wrapper}>
         <div className="right-part">
         <SubTitle
             text="our latest news"
@@ -15,7 +15,7 @@ const Index = () => {
         <div className="left-part">
         <a className="btn btn__primary" href="#">View more</a>
         </div>
-        </section>
+        </div>
     );
 }
 

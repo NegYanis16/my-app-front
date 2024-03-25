@@ -4,7 +4,7 @@ import styles from "./index.module.scss";
 
 const Index = ({ articles }) => {
     return (
-
+        <>
         <div className={styles.grid}>
             {
                 articles?.map(article => (
@@ -12,7 +12,12 @@ const Index = ({ articles }) => {
                     <PostItem key={article.id} article={article} />
                 ))
             }
+            
         </div>
+        <div className={styles.button}>
+        <a className="btn btn__secondary" href="#">Load more</a>
+        </div>
+        </>
     );
 }
 
